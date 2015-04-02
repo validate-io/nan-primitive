@@ -17,18 +17,39 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-nan-primitive' );
+var isnan = require( 'validate.io-nan-primitive' );
 ```
 
-#### foo( value )
+#### isnan( value )
 
-What does this function do?
+Validates if a `value` is a `NaN` primitive.
+
+``` javascript
+var value = NaN;
+
+var bool = isnan( value );
+// returns true
+```
+
+__Note__: the method first validates that a `value` is `numeric` before validating if a `value` is `NaN`. For non-numeric values, the method returns `false`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-nan-primitive' );
+var isnan = require( 'validate.io-nan-primitive' );
+
+console.log( isnan( NaN ) );
+// returns true
+
+console.log( isnan( new Number( NaN ) ) );
+// returns false
+
+console.log( isnan( '5' ) );
+// returns false
+
+console.log( isnan( 5 ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

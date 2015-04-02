@@ -26,7 +26,16 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "number",
+    "numeric",
+    "non-numeric",
+    "nan",
+    "is",
+    "isnan",
+    "type",
+    "check"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/nan-primitive/issues"
